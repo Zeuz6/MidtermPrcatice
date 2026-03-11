@@ -5,4 +5,11 @@ Issue: Determine when no box can be moved and notify the user the game has no so
 Issue: The step counter value is incorrect when the user wins.
 Issue: Missing documentation for methods and classes in GameEngine.java and SokobanGUI.java
 Feature: Generate javadoc documentation
-Feature: Design 2 additional CSV files with solvable Sokoban levels
+Feature: Design 2 additional CSV files with solvable Sokoban level
+
+running game
+javac edu/txst/midterm/*.java
+java edu.txst.midterm.SokobanGUI
+
+delete compiled files
+rm edu/txst/midterm/*.class
