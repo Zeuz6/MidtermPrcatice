@@ -55,13 +55,15 @@ public class GameEngine {
 		}
 
 		// Issue 1. Check for player not going into goal
-
-	if(targetCell == GOAL || targetCell == GOAL){
-		return; //Movement blocked
-	}
-
+		if(targetCell == GOAL){
+			return; //Movement blocked
+		}
+		// Issue 2. Check for player not moving box on goal
+		if(targetCell == BOX_ON_GOAL){
+			return; //Movement blocked
+		}
 		// 2. Check for Boxes (Normal Box or Box on Goal)
-		if (targetCell == BOX || targetCell == BOX_ON_GOAL) {
+		if (targetCell == BOX/*Deleted targetCell == BOX_ON_GOAL*/) {
 			int nextRow = targetRow + dRow;
 			int nextCol = targetCol + dCol;
 			int nextCell = board.getCell(nextRow, nextCol);
