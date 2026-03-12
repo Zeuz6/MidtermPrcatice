@@ -19,7 +19,14 @@ public class GameEngine {
 	}
 
 	public boolean isGameOver() {
-		return false;
+		for(int r = 0; r < 5; r++){
+			for (int c = 0; c < 10; c++){
+				if(board.getCell(r, c) == BOX) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 
 	public boolean isGameStuck() {
